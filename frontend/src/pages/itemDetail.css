@@ -1,0 +1,538 @@
+.detail-page {
+  padding: 10px 0;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.95fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.detail-left,
+.detail-left .card {
+  height: 100%;
+}
+
+.media-box {
+  height: 100%;  
+  min-height: 520px; 
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+  padding: 14px;
+}
+
+.media-box {
+  width: 100%;
+  height: 520px;
+  border-radius: 14px;
+  border: 1px solid #f0f0f3;
+  background: #fafafb;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.media-placeholder {
+  font-size: 3rem;
+  color: #999;
+}
+
+/* Right summary */
+.summary-card {
+  padding: 16px;
+}
+
+.title {
+  margin: 0 0 10px;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #111;
+  line-height: 1.2;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.heart-btn {
+  width: 54px;
+  height: 54px;
+  padding: 0;
+  border-radius: 50% !important;   
+  aspect-ratio: 1 / 1;            
+  border: 1px solid #e7e8ee;
+  background: #fff;
+  display: inline-flex;            
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: #9aa0a6;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  overflow: hidden;               
+  flex: 0 0 54px;                  
+  transition: transform 0.08s ease, box-shadow 0.15s ease, border-color 0.15s ease,
+  background-color 0.15s ease, color 0.15s ease;
+}
+
+.heart-btn span[aria-hidden="true"] {
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.heart-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.08);
+  border-color: #dfe2ea;
+}
+
+.heart-btn.active {
+  color: #e63946;
+  border-color: rgba(230, 57, 70, 0.25);
+  background: rgba(230, 57, 70, 0.06);
+}
+
+.heart-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.heart-btn:focus,
+.heart-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.price-block {
+  margin-bottom: 12px;
+}
+
+.price {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #111;
+}
+
+.subline {
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.subline .dot {
+  opacity: 0.6;
+}
+
+.subline .left {
+  font-weight: 900;
+  color: #0a7a2f;
+  background: rgba(10, 122, 47, 0.08);
+  border: 1px solid rgba(10, 122, 47, 0.18);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.subline .left.ended {
+  color: #dc3545;
+  background: rgba(220, 53, 69, 0.08);
+  border: 1px solid rgba(220, 53, 69, 0.18);
+}
+
+.subline .right{
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.desc {
+  margin: 0 0 12px;
+  color: #444;
+  line-height: 1.45;
+}
+
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.pill {
+  font-size: 0.85rem;
+  color: #444;
+  background: #f2f3f7;
+  border: 1px solid #e7e8ee;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+/* Bidding Section */
+.price-label {
+  font-size: 0.85rem;
+  color: #666;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.bid-count {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 4px;
+}
+
+.highest-bidder {
+  color: #007bff;
+}
+
+.bid-section {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+}
+
+.bid-ended,
+.bid-owner,
+.bid-login {
+  padding: 16px;
+  border-radius: 12px;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.ended-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #dc3545;
+  margin: 0 0 8px;
+}
+
+.winner-text {
+  margin: 0;
+  color: #333;
+}
+
+.owner-text,
+.login-text {
+  margin: 0;
+  color: #666;
+}
+
+.bid-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bid-input-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bid-input-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+  border-radius: 12px;
+  border: 2px solid #ddd;
+  background: #fff;
+}
+
+.bid-input-wrap:focus-within {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+.currency {
+  font-weight: 800;
+  color: #555;
+}
+
+.bid-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 12px 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  min-width: 120px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* remove spinners */
+.bid-input::-webkit-outer-spin-button,
+.bid-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.bid-input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.bid-btn {
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 900;
+  background: #007bff;
+  color: #fff;
+  white-space: nowrap;
+}
+.bid-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.bid-hint {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0;
+}
+
+.bid-error {
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #fee2e2;
+  color: #dc2626;
+  font-size: 0.9rem;
+}
+
+.bid-success {
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #d1fae5;
+  color: #059669;
+  font-size: 0.9rem;
+}
+
+/* Bid History */
+.bid-history-card {
+  margin-top: 14px;
+}
+
+.bid-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bid-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f3;
+}
+
+.bid-item:last-child {
+  border-bottom: none;
+}
+
+.bid-amount {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #111;
+  min-width: 80px;
+}
+
+.bid-bidder {
+  flex: 1;
+  color: #333;
+}
+
+.bid-time {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Q&A */
+.qa {
+  margin-top: 16px;
+  display: grid;
+  gap: 14px;
+}
+
+.section-title {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: #1a1a2e;
+}
+
+.q-list {
+  display: grid;
+  gap: 12px;
+}
+
+.q-item {
+  padding: 10px 0;
+  border-top: 1px solid #f0f0f3;
+}
+
+.q-item:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.q-top {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.q-user {
+  font-weight: 900;
+  color: #111;
+}
+
+.q-text {
+  color: #333;
+}
+
+.answer {
+  margin-top: 8px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #f7f7fb;
+  border: 1px solid #ececf2;
+  color: #333;
+}
+
+.answer-label {
+  font-weight: 900;
+  margin-right: 6px;
+  color: #1a1a2e;
+}
+
+.answer-box {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ask-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.input {
+  flex: 1;
+  min-width: 240px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 1rem;
+  background: #fff;
+}
+
+.input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+.btn {
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 900;
+  background: #007bff;
+  color: #fff;
+  transition: transform 0.05s ease, opacity 0.2s ease;
+}
+
+.btn.ghost {
+  background: #f2f3f7;
+  border: 1px solid #e7e8ee;
+  color: #1a1a2e;
+}
+
+.btn:hover {
+  opacity: 0.92;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.muted {
+  color: #666;
+}
+
+.tip {
+  margin: 10px 0 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .detail-grid {
+    align-items: stretch; 
+    grid-template-columns: 1fr;
+  }
+
+  .media-box {
+    height: 420px;
+  }
+}
+
+@media (max-width: 700px) {
+  .media-box {
+    height: 320px;
+  }
+
+  .title {
+    font-size: 1.35rem;
+  }
+
+  .price {
+    font-size: 1.45rem;
+  }
+}
